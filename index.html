@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Is the tube on strike&#8253;</title>
+		<style>
+			body {
+				text-align: center;
+				font-family: Georgia, sans-serif;
+			}
+			h2 {
+				font-weight: bold; 
+				font-size: 120pt; 
+				line-height: 120pt;
+				padding: 10px;
+				margin: 30px;
+				text-decoration: none; 
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 id="shortanswer">not yet&hellip;</h2>
+		<script type="text/javascript">
+			var strike1start = new Date(2014, 3, 28, 21);
+			var strike1end = new Date(2014, 3, 30, 24);
+			var strike2start = new Date(2014, 4, 5, 21);
+			var strike2end = new Date(2014, 4, 8, 24);
+			function update() {
+				var datetime = new Date();
+				if ((datetime > strike1start && datetime < strike1end) || (datetime > strike2start && datetime < strike2end)) {
+					document.getElementById('shortanswer').innerHTML = 'YES!';
+				}
+			}
+			update();
+			setInterval(update, 10000);
+		</script>
+	</body>
+</html>
