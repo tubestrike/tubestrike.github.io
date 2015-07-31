@@ -32,19 +32,41 @@
 </head>
 <body>
     <h1>Is the tube on strike&#8253;</h1>
-    <h2 id="shortanswer">no</h2>
+    <h2 id="shortanswer">not yet</h2>
     <p>
-        <a id="twitter-link" href="https://twitter.com/intent/tweet?text=The tube is NOT currently on strike.&url=https%3A%2F%2Fisthetubeonstrike.com&hashtags=TubeStrike&via=shutdownscanner&related=yoflowuk">Tweet this important public service announcement!
+        <a id="twitter-link" href="https://twitter.com/intent/tweet?text=The tube is NOT currently on strike.&url=https%3A%2F%2Fisthetubeonstrike.com&hashtags=TubeStrike&via=shutdownscanner&related=yoflowuk">
+            Tweet this important public service announcement!
         </a>
     </p>
-    <p>&nbsp;</p>
     <p>
-        If you like this then you'll probably like <a href="https://instabail.uk">InstaBail</a> too.
+        Also available as a cross domain <a href="https://isthetubeonstrike.com/api.json">JSON API</a>.
     </p>
     <p>
-        It's a mobile web app that lets you easily bail on your mates
-        <br />
-        with comedy excuses based on real-time public transport data.
+        <a href="https://tfl.gov.uk/modes/tube/tube-strike">Official information</a> from TfL.
+    </p>
+    <p>
+        &nbsp;
+    </p>
+    <p>
+        &nbsp;
+    </p>
+    <p>
+        If you like this then you might like some of my other projects:
+    </p>
+    <p>
+        <a href="https://instabail.uk">InstaBail</a> - app for bailing on your mates with transport disruptions.
+    </p>
+    <p>
+        <a href="https://unop.uk/dev/train-disruption-indicator-with-a-blinky-tape-rgb-led-strip-and-raspberry-pi/">Blinky Trains</a> - LED light strip which displays train and tube statuses.
+    </p>
+    <p>
+        <a href="http://huxley.unop.uk/">Huxley</a> - JSON proxy for the National Rail Live Departure Boards API.
+    </p>
+    <p>
+        <a href="https://yoflow.uk">Yo Flow</a> - web app for gyms and personal trainers to induct new members.
+    </p>
+    <p>
+        Lots more on <a href="https://unop.uk/">my blog</a>.
     </p>
 
     <script type="text/javascript">
@@ -62,6 +84,10 @@
                         if (now > new Date(strike.start) && now < new Date(strike.end)) {
                             document.getElementById('shortanswer').innerHTML = 'YES!';
                             document.getElementById('twitter-link')['href'] = 'https://twitter.com/intent/tweet?text=The tube is ON STRIKE! How will we ever cope%E2%80%BD&url=https%3A%2F%2Fisthetubeonstrike.com&hashtags=TubeStrike&via=shutdownscanner&related=yoflowuk';
+                            break;
+                        } else {
+                            document.getElementById('shortanswer').innerHTML = 'not yet';
+                            document.getElementById('twitter-link')['href'] = 'https://twitter.com/intent/tweet?text=The tube is NOT currently on strike.&url=https%3A%2F%2Fisthetubeonstrike.com&hashtags=TubeStrike&via=shutdownscanner&related=yoflowuk';
                         }
                     }
                 }
